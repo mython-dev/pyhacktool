@@ -87,14 +87,14 @@ def main():
             print(description_tool_burpsuite)
             os.system(install_burpsuite)
             print(zapusk_burpsuite)
-            clear()
+
             main()
       elif choose_tool == '2':
             time.sleep(0.5)
             print(description_tool_owasp)
             os.system(install_owasp)
             print(zapusk_owasp)
-            clear()
+
             main()
 
       elif choose_tool == '3':
@@ -108,15 +108,17 @@ def main():
             time.sleep(0.5)
             print(description_tool_john)
             os.system(install_johntheripper)
-            clear()
+
             print(zapusk_johntheripper)
+
+            main()
 
       elif choose_tool == '5':
             time.sleep(0.5)
             print(description_tool_hydra)
             os.system(install_hydra)
-            clear()
             print(zapusk_hydra)
+            main()
 
       else: 
             print(f'\n{error}Нет такого инструмента\n{nc}')
