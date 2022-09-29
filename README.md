@@ -9,7 +9,7 @@
 ### 1. 📝 Запуск скрипта.
 ```
 git clone https://github.com/mython-dev/pyhacktool.git
-cd pyhacktools
+cd pyhacktool
 sudo bash install.sh
 ```
 
