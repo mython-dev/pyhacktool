@@ -9,4 +9,4 @@ Hydra — это взломщик с параллельным входом в с
 
 install_hydra = ('sudo apt-get install hydra-gtk')
 
-zapusk_hydra = print('Запуск инструмента: hydra')
+zapusk_hydra = ('Запуск инструмента: hydra')

@@ -1,11 +1,22 @@
 import os
 import time
 import sys
+from sys import platform
 from tools.BurpSuite  import *
 from tools.owaspzap import *
 from tools.metasploit import *
 from tools.johntheripper import *
 from tools.hydra import *
+from tools.nmap import *
+from tools.zenmap import *
+from tools.masscan import *
+from tools.tcpdump import *
+from tools.wireshark import *
+from tools.sqlmap import *
+from tools.aircrackng import *
+from tools.wpscan import *
+from tools.nikto import *
+from tools.Wapiti import *
 
 
 clear = lambda: os.system('clear')
@@ -38,6 +49,22 @@ info2  =   f"{green}[{white}•{green}] {purple}"
 
 clear()
 
+def check_os():
+
+      os = platform
+
+      
+      if os == 'win'.lower() and 'win32'.lower():
+            time.sleep(0.5)
+            print(f'\n{error}Этот скрипт только для линукса(Debian Ubuntu)\n')
+            sys.exit()
+
+      elif os == 'darwin'.lower():
+            time.sleep(0.5)
+            print(f'\n{error}Этот скрипт только для линукса(Debian Ubuntu)\n')
+            sys.exit()
+
+check_os()
 
 menu = f'''{nc}______________________________________________________________________________{nc}
 
@@ -71,13 +98,14 @@ menu = f'''{nc}_________________________________________________________________
 {white}14){white} {cyan}Nikto{cyan}
 {white}15){white} {cyan}Wapiti{cyan}
 
-{info}{nc}[00] Дополнительная информация{nc}
+{error}0 Выйти!
+
 '''
 print(menu)
 
 def main():
       try:
-            choose_tool = input('PyHackTool~# ')
+            choose_tool = input(f'{nc}PyHackTool~# ')
       except KeyboardInterrupt:
             print(f'\n{success}Выход!')
             sys.exit()
@@ -87,8 +115,9 @@ def main():
             print(description_tool_burpsuite)
             os.system(install_burpsuite)
             print(zapusk_burpsuite)
-
+            
             main()
+ 
       elif choose_tool == '2':
             time.sleep(0.5)
             print(description_tool_owasp)
@@ -101,14 +130,15 @@ def main():
             time.sleep(0.5)
             print(description_tool_msf)
             os.system(install_burpsuite)
-            clear()
+
             print(zapusk_burpsuite)
+
+            main()
 
       elif choose_tool == '4':
             time.sleep(0.5)
             print(description_tool_john)
             os.system(install_johntheripper)
-
             print(zapusk_johntheripper)
 
             main()
@@ -118,8 +148,89 @@ def main():
             print(description_tool_hydra)
             os.system(install_hydra)
             print(zapusk_hydra)
+
+            main()
+      
+      elif choose_tool == '6':
+            time.sleep(0.5)
+            print(description_tool_nmap)
+            os.system(install_nmap)
+            print(start_nmap)
+            main()
+      
+      elif choose_tool == '7':
+            time.sleep(0.5)
+            print(description_tool_zenmap)
+            os.system(install_zenmap)
+            print(start_zenmap)
+
+            main()
+      
+      elif choose_tool == '8':
+            time.sleep(0.5)
+            print(descirption_tool_masscan)
+            os.system(install_masscan)
+            print(start_masscan)
+
             main()
 
+      elif choose_tool == '9':
+            time.sleep(0.5)
+            print(description_tool_tcpdump)
+            os.system(install_tcp_dump)
+            print(start_tcpdump)
+
+            main()
+
+      elif choose_tool == '10':
+            time.sleep(0.5)
+            print(description_tool_wireshark)
+            os.system(install_wireshark)
+            print(start_wireshark)
+
+            main()
+
+      elif choose_tool == '11':
+            time.sleep(0.5)
+            print(description_tool_sqlmap)
+            os.system(install_sqlmap)
+            print(start_sqlmap)
+
+            main()
+
+      elif choose_tool == '12':
+            time.sleep(0.5)
+            print(description_tool_aircrackng)
+            os.system(install_aircrackng)
+            print(start_aircrackng)
+
+            main()
+
+      elif choose_tool == '13':
+            time.sleep(0.5)
+            print(description_tool_wpscan)
+            os.system(install_wpscan)
+            print(start_wpscan)
+
+            main()
+  
+      elif choose_tool == '14':
+            time.sleep(0.5)
+            print(description_tool_nikto)
+            os.system(install_nikto)
+            print(start_nikto)
+
+            main()
+
+      elif choose_tool == '15':
+            time.sleep(0.5)
+            print(description_tool_wapiti)
+            os.system(install_wapiti)
+            print(start_wapiti)
+
+            main()
+      
+   
       else: 
             print(f'\n{error}Нет такого инструмента\n{nc}')
             main()
