@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/Python-3-blue)![](https://img.shields.io/badge/bash-dark)
 ![](https://img.shields.io/badge/platform-Linux%20%7C%20Debian%20%7C%20Ubuntu-blue)
 
-###1. 📝 Запуск скрипта.
+### 1. 📝 Запуск скрипта.
 ```
 git clone https://github.com/mython-dev/pyhacktool.git
 cd pyhacktools
